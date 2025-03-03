@@ -3,11 +3,9 @@ if (!defined('_GNUBOARD_')) exit;
 add_stylesheet('<link rel="stylesheet" href="'.$random_skin_url.'/style.css">', 0);
 
 $max = $ra['ra_progress_max'];
-$now = $ra['ra_progress_p'] + $ra['ra_progress_m'];
-$result_count = $max_value - $now;
-$per = $now > 0 ? ($now/$max*100) : 0;
-$per = 100 - $per;
+$now = $ra['ra_progress_max'] + $ra['ra_progress_p'] + $ra['ra_progress_m'];
 
+$per = $now > 0 ? ($now/$max*100) : 0;
 ?>
 
 <div class="raid-progress-box">
